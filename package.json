@@ -22,8 +22,10 @@
     "popper.js": "^1.16.1"
   },
   "description": "portfolio app",
-  "main": "index.js",
-  "devDependencies": {},
+  "main": "app.js",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TanvirMahmud01/portfolio.git"
