@@ -30,5 +30,9 @@ router.get('/services', function(req, res, next) {
 router.get('/contact', function(req, res, next) {
   res.render('index', { title: 'Contact Me'});
 });
+/* GET Resume page. */
+router.get('/resume', function(req, res, next) {
+  res.render('resume', { title: 'Resume'});
+});
 
 module.exports = router;
