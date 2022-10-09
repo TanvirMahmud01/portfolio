@@ -1,6 +1,7 @@
 /* custom css goes in here */
 .navbar-brand img {
-    height: 50px;
+    height: 62px;
+    width: 150px;
 }
 
 
@@ -13,13 +14,17 @@ body {
     background-color: black;
 }
 .main-body {
-    height: 100vh;
+    
     background: black;
     color: gainsboro;
 }
 
 .title {
     margin: 50px;
+}
+
+.sub-title{
+    color: #c78b0d;
 }
 
 /* About me page style */
@@ -30,7 +35,7 @@ body {
 
 .resume-btn {
     text-decoration: none;
-    color: #0cb5f0;
+    color: #c78b0d;
     border: 2px solid;
     padding: 10px 35px;
     background-color: black;
@@ -38,8 +43,12 @@ body {
     font-size: 20px;
     width: 150px;
 }
-.btn.resume-btn:hover {
-    background: #0cb5f0;
+.resume-btn:hover {
+        background: #c78b0d;
+        color: #f8f9fa;
+        border: 2px solid #7c5708;
+        transition: 0.5s ease;
+    
 }
 .click-tag {
     margin-bottom: 30px;
@@ -53,4 +62,7 @@ body {
 .about-me-context {
     font-size: 20px;
     margin-bottom: 60px;
+}
+.footer {
+    color: #c78b0d;
 }
