@@ -1,33 +1,50 @@
-<%- include partials/header.ejs %>
+<%- include partials/header.ejs %> <%- include partials/main_nav.ejs %>
 
+<!--   Main Content-->
+<main class="container">
+  <div class="main-body">
+    <h1 class="display-4 title">My <%= title %></h1>
 
-<%- include partials/main_nav.ejs %> 
-
-  <!--   Main Content-->
-  <main class="container">
-    <div class="jumbotron">
-      <h1 class="display-4">Welcome to the <%= title %> page</h1>
-      <br>
-      <h4>Here are some of the projects that I worked on:</h4>
-      <div class="projects">
-        <div>
-            <img width="300" height="200" src=".\Assets\images\service1.jpg" alt="" srcset="">
-            <p>Web Development</p>
+    <h4 class="title mb-5">Here are some of the projects that I worked on:</h4>
+    <div class="context-wrap">
+      <div class="pb-5">
+        <div class="row">
+          <div class="col mt-5 text-center">
+            <img
+              width="500"
+              height="300"
+              src=".\Assets\images\calculator.png"
+              alt="Calculator App"
+              srcset=""
+            />
+            <h5 class="mt-2">Calculator app crated using C#</h5>
+          </div>
+          <div class="col mt-5 text-center">
+            <img
+              width="500"
+              height="300"
+              src=".\Assets\images\ecommerce.png"
+              alt=""
+              srcset=""
+            />
+            <h5 class="mt-2">E-Commerce Website</h5>
+          </div>
         </div>
-        <div>
-            <img width="300" height="200" src=".\Assets\images\service2.jpg" alt="" srcset="">
-            <p>Programming</p>
+        <div class="row mt-5 text-center">
+          <div class="col">
+            <img
+              width="500"
+              height="300"
+              src=".\Assets\images\weather.png"
+              alt=""
+              srcset=""
+            />
+            <h5 class="mt-2">Weather App</h5>
+          </div>
         </div>
-        <div>
-            <img width="300" height="200" src=".\Assets\images\service3.jpg" alt="" srcset="">
-            <p>Software Testing</p>
-        </div>
+      </div>
     </div>
+  </div>
+</main>
 
-    </div>
-
-  </main>
-
-<%- include partials/bottom_nav.ejs %> 
-
-<%- include partials/footer.ejs %>
+<%- include partials/bottom_nav.ejs %> <%- include partials/footer.ejs %>

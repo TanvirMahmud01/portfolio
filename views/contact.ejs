@@ -1,51 +1,77 @@
-<%- include partials/header.ejs %>
+<%- include partials/header.ejs %> <%- include partials/main_nav.ejs %>
 
-
-<%- include partials/main_nav.ejs %> 
-
-  <!--   Main Content-->
-  <main class="container">
-    <div class="jumbotron">
-      <h1 class="display-4">Welcome to the <%= title %> page</h1>
-      <br>
-      <h4>You can reach me at:</h4>
-      <p>Cell: 437-241-4595</p>
-      <p>email: tmahmud7@my.centennialcollege.ca</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/tanvir-mahmud-tm/">Click Here</a></p>
+<!--   Main Content-->
+<main class="container">
+  <div class="main-body">
+    <h1 class="display-4 title"><%= title %></h1>
+    <div class="context-wrap">
+        <div class="row">
+          <div class="about-me-wrap col about-me-context">
+            <h4>You can reach me at:</h4>
+            <p>Cell: 437-241-4595</p>
+            <p>email: tmahmud7@my.centennialcollege.ca</p>
+            <p>
+              LinkedIn:
+              <a href="https://www.linkedin.com/in/tanvir-mahmud-tm/"
+                >Click Here</a
+              >
+            </p>
+          </div>
+          <div class="col mb-5 mt-5">
+            <h3 class=" mb-3">Please enter you contact details below:</h3>
+            <form action="/">
+              <div class="form-group mb-3">
+                <label for="fName" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fName"
+                  placeholder="Enter your First Name"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="lName" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lName"
+                  placeholder="Enter your Last Name"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="contact" class="form-label">Contact Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="contact"
+                  placeholder="Enter your Telephone Number"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+     
+            <div class="form-group mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea  name="message"
+              placeholder="Your message goes here" class="form-control" id="message" rows="3"></textarea>
+            </div>
+              <button type="submit" class="btn resume-btn">Submit</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="form">
-      <h4>Please enter you contact details below:</h4>
-      <form action="/">
-        <div class="form-group">
-          <label for="fName">First Name</label>
-          <input type="text" class="form-control" id="fName"  placeholder="Enter your First Name">
-        </div>
-        <div class="form-group">
-          <label for="lName">First Name</label>
-          <input type="text" class="form-control" id="lName"  placeholder="Enter your Last Name">
-        </div>
-        <div class="form-group">
-          <label for="contact">Contact Number</label>
-          <input type="tel" class="form-control" id="contact"  placeholder="Enter your Telephone Number">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <label for="message">Message</label>
-        <br>
-        <textarea id="message" name="message" placeholder="Your message goes here" style="width:500px"></textarea>
-        <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        
-      </form>
-    </div>
+</main>
 
-
-  </main>
-
-<%- include partials/bottom_nav.ejs %> 
-
-<%- include partials/footer.ejs %>
+<%- include partials/bottom_nav.ejs %> <%- include partials/footer.ejs %>

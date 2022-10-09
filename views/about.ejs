@@ -1,28 +1,33 @@
-<%- include partials/header.ejs %>
+<%- include partials/header.ejs %> <%- include partials/main_nav.ejs %>
 
-
-<%- include partials/main_nav.ejs %> 
-
-  <!--   Main Content-->
-  <main class="container">
-    <div class="jumbotron">
-      <h1 class="display-4">Welcome to the <%= title %> page</h1>
-      <div class="col-md-4 px-0">
-        <div class="ms-auto d-block">
-            <img src=".\Assets\images\myImage.jpg" alt="My Picture" class="img-fluid">
+<!--   Main Content-->
+<main class="container">
+  <div class="main-body">
+    <h1 class="display-4 title"><%= title %></h1>
+    <div class="context-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="about-me-wrap col">
+            <p class="about-me-context">
+              My name is Tanvir Mahmud. Currently I'm enrolled in Artificial
+              Intelligence Program at Centennial College. I also hold a
+              Bachelor's degree in Automotive Engineering. I'm passiionate about
+              learning and applying new Technologies everyday.
+            </p>
+            <h5 class="click-tag">Click below to get my resume</h5>
+            <a href="/resume" class="resume-btn">Resume</a>
+          </div>
+          <div class="col">
+            <img
+              src=".\Assets\images\myImage.jpg"
+              alt="My Picture"
+              class="img-fluid img-thumbnail "
+            />
+          </div>
         </div>
-        <a href="/resume">Click here for my resume</a>
+      </div>
     </div>
-      <p>My name is Tanvir Mahmud. Currently I'm enrolled in Artificial Intelligence Program at Centennial 
-        College. I also hold a Bachelor's degree in Automotive Engineering. I'm passiionate 
-        about learning and applying new Technologies everyday.
-      </p>
-    </div>
-  </main>
+  </div>
+</main>
 
-<%- include partials/bottom_nav.ejs %> 
-
-<%- include partials/footer.ejs %>
-
-
-
+<%- include partials/bottom_nav.ejs %> <%- include partials/footer.ejs %>

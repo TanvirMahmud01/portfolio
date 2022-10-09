@@ -1,33 +1,50 @@
-<%- include partials/header.ejs %>
+<%- include partials/header.ejs %> <%- include partials/main_nav.ejs %>
 
+<!--   Main Content-->
+<main class="container">
+  <div class="main-body">
+    <h1 class="display-4 title"><%= title %> page</h1>
 
-<%- include partials/main_nav.ejs %> 
-
-  <!--   Main Content-->
-  <main class="container">
-    <div class="jumbotron">
-      <h1 class="display-4">Welcome to the <%= title %> page</h1>
-      <br>
-      <h4>Here are the services that I provide:</h4>
-        <div class="services">
-            <div>
-                <img width="300" height="200" src=".\Assets\images\service1.jpg" alt="" srcset="">
-                <p>Web Development</p>
-            </div>
-            <div>
-                <img width="300" height="200" src=".\Assets\images\service2.jpg" alt="" srcset="">
-                <p>Programming</p>
-            </div>
-            <div>
-                <img width="300" height="200" src=".\Assets\images\service3.jpg" alt="" srcset="">
-                <p>Software Testing</p>
-            </div>
+    <h4 class="title mb-5">Here are the services that I provide:</h4>
+    <div class="context-wrap">
+      <div class="pb-5">
+        <div class="row">
+          <div class="col mt-5 text-center">
+            <img
+              width="500"
+              height="300"
+              src=".\Assets\images\service1.jpg"
+              alt=""
+              srcset=""
+            />
+            <h5>Web Development</h5>
+          </div>
+          <div class="col mt-5 text-center">
+            <img
+              width="500"
+              height="300"
+              src=".\Assets\images\service2.jpg"
+              alt=""
+              srcset=""
+            />
+            <h5>Programming</h5>
+          </div>
         </div>
-
+        <div class="row mt-5 text-center">
+          <div class="col">
+            <img
+              width="500"
+              height="300"
+              src=".\Assets\images\service3.jpg"
+              alt=""
+              srcset=""
+            />
+            <h5>Software Testing</h5>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</main>
 
-  </main>
-
-<%- include partials/bottom_nav.ejs %> 
-
-<%- include partials/footer.ejs %>
+<%- include partials/bottom_nav.ejs %> <%- include partials/footer.ejs %>

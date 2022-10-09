@@ -2,6 +2,55 @@
 .navbar-brand img {
     height: 50px;
 }
-.services img {
-    display: block;
+
+
+.form {
+    background: #80808045;
+    padding: 30px;
+    border-radius: 10px;
+}
+body {
+    background-color: black;
+}
+.main-body {
+    height: 100vh;
+    background: black;
+    color: gainsboro;
+}
+
+.title {
+    margin: 50px;
+}
+
+/* About me page style */
+.context-wrap {
+    background: rgb(108 117 125 / 5%);
+    border-radius: 8px;
+}
+
+.resume-btn {
+    text-decoration: none;
+    color: #0cb5f0;
+    border: 2px solid;
+    padding: 10px 35px;
+    background-color: black;
+    border-radius: 35px;
+    font-size: 20px;
+    width: 150px;
+}
+.btn.resume-btn:hover {
+    background: #0cb5f0;
+}
+.click-tag {
+    margin-bottom: 30px;
+}
+.about-me-wrap.col {
+    margin: 0 25px;
+    justify-content: center;
+    display: flex;
+    flex-flow: column;
+}
+.about-me-context {
+    font-size: 20px;
+    margin-bottom: 60px;
 }
