@@ -8,9 +8,41 @@
     <div class="jumbotron">
       <h1 class="display-4">Welcome to the <%= title %> page</h1>
       <br>
-      <h4>This is the contact me page.</h4>
+      <h4>You can reach me at:</h4>
+      <p>Cell: 437-241-4595</p>
+      <p>email: tmahmud7@my.centennialcollege.ca</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/tanvir-mahmud-tm/">Click Here</a></p>
       </div>
     </div>
+    <div class="form">
+      <h4>Please enter you contact details below:</h4>
+      <form action="/">
+        <div class="form-group">
+          <label for="fName">First Name</label>
+          <input type="text" class="form-control" id="fName"  placeholder="Enter your First Name">
+        </div>
+        <div class="form-group">
+          <label for="lName">First Name</label>
+          <input type="text" class="form-control" id="lName"  placeholder="Enter your Last Name">
+        </div>
+        <div class="form-group">
+          <label for="contact">Contact Number</label>
+          <input type="tel" class="form-control" id="contact"  placeholder="Enter your Telephone Number">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <label for="message">Message</label>
+        <br>
+        <textarea id="message" name="message" placeholder="Your message goes here" style="width:500px"></textarea>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        
+      </form>
+    </div>
+
 
   </main>
 
