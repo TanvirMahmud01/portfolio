@@ -18,7 +18,7 @@ function requireAuth(req, res, next)
 }
 
 /* Get Route for the Book List page - READ operation */
-router.get('/',  bookController.displayBookList);
+router.get('/', requireAuth,  bookController.displayBookList);
 
 
 /* GET Route for displaying ADD page - CREATE Operation */
