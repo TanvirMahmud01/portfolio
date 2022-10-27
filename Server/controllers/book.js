@@ -1,107 +1,101 @@
-let express = require('express');
+let express = require("express");
 let router = express.Router();
-let mongoose = require('mongoose');
+let mongoose = require("mongoose");
 // create a reference to the model
 
-let jwt = require('jsonwebtoken');
+let jwt = require("jsonwebtoken");
 
-let Book = require('../models/book');
+let Book = require("../models/book");
 
 module.exports.displayBookList = (req, res, next) => {
-    Book.find((err, bookList) => {
-        if(err)
-        {
-            return console.error(err);
-        } else {
-          
-            // console.log(bookList);
-            res.render('book/list', 
-            {title: 'Contact List', 
-            BookList: bookList, 
-            displayName: req.user ? req.user.displayName : ''});
-        }
-    });
-}
+  Book.find((err, bookList) => {
+    if (err) {
+      return console.error(err);
+    } else {
+      // console.log(bookList);
+      res.render("book/list", {
+        title: "Contact List",
+        BookList: bookList,
+        displayName: req.user ? req.user.displayName : "",
+      });
+    }
+  });
+};
 
 module.exports.displayAddPage = (req, res, next) => {
-    res.render('book/add', {title: 'Add Contact', 
-    displayName: req.user ? req.user.displayName : ''});
-}
+  res.render("book/add", {
+    title: "Add Contact",
+    displayName: req.user ? req.user.displayName : "",
+  });
+};
 
 module.exports.processAddPage = (req, res, next) => {
-    let newBook = Book({
-        "name": req.body.name,
-        "phone": req.body.phone,
-        "email": req.body.email
-    });
+  let newBook = Book({
+    name: req.body.name,
+    phone: req.body.phone,
+    email: req.body.email,
+  });
 
-    Book.create(newBook, (err, Book) => {
-        if(err)
-        {
-            console.log(err);
-            res.end(err);
-        }
-        else {
-                // refresh the contact list
-                res.redirect('/contact-list');
-        }
-    });
-}
+  Book.create(newBook, (err, Book) => {
+    if (err) {
+      console.log(err);
+      res.end(err);
+    } else {
+      // refresh the contact list
+      res.redirect("/contact-list");
+    }
+  });
+};
 
 module.exports.displayEditPage = (req, res, next) => {
-    let id = req.params.id;
+  let id = req.params.id;
 
-    Book.findById(id, (err, bookToEdit) => {
-        if(err)
-        {
-            console.log(err);
-            res.end(err);
-        }
-        else {
-            // show the edit view
-            res.render('book/edit', 
-            {title: 'Edit Contact', 
-            book: bookToEdit, 
-            displayName: req.user ? req.user.displayName : ''});
-        }
-    });
-}
+  Book.findById(id, (err, bookToEdit) => {
+    if (err) {
+      console.log(err);
+      res.end(err);
+    } else {
+      // show the edit view
+      res.render("book/edit", {
+        title: "Edit Contact",
+        book: bookToEdit,
+        displayName: req.user ? req.user.displayName : "",
+      });
+    }
+  });
+};
 
 module.exports.processEditPage = (req, res, next) => {
-    let id = req.params.id
+  let id = req.params.id;
 
-    let updateBook = Book({
-        "_id": id,
-        "name": req.body.name,
-        "phone": req.body.phone,
-        "email": req.body.email
-    });
+  let updateBook = Book({
+    _id: id,
+    name: req.body.name,
+    phone: req.body.phone,
+    email: req.body.email,
+  });
 
-    Book.updateOne({_id: id}, updateBook, (err) => {
-        if(err)
-        {
-            console.log(err);
-            res.end(err);
-        }
-        else{
-            // refresh the contact-list
-            res.redirect('/contact-list');
-        }
-    });
-}
+  Book.updateOne({ _id: id }, updateBook, (err) => {
+    if (err) {
+      console.log(err);
+      res.end(err);
+    } else {
+      // refresh the contact-list
+      res.redirect("/contact-list");
+    }
+  });
+};
 
 module.exports.performDelete = (req, res, next) => {
-    let id = req.params.id;
+  let id = req.params.id;
 
-    Book.remove({_id: id}, (err) => {
-        if(err)
-        {
-            console.log(err);
-            res.end(err);
-        }
-        else{
-            // refresh the contact-list
-            res.redirect('/contact-list');
-        }
-    })
-}
+  Book.remove({ _id: id }, (err) => {
+    if (err) {
+      console.log(err);
+      res.end(err);
+    } else {
+      // refresh the contact-list
+      res.redirect("/contact-list");
+    }
+  });
+};

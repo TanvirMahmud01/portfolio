@@ -135,8 +135,9 @@ module.exports.processRegisterPage = (req, res, next) => {
 
 module.exports.performLogout = (req, res, next) => {
     req.logout(function(err) {
-        if (err) { return next(err); }
+        if (err) { return next(err); } 
         res.redirect('/');
+    
     });
-    //res.redirect('/');
+    res.redirect('/');
 }
